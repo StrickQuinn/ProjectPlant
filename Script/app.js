@@ -1,3 +1,6 @@
-//Test
-alert('hi')
-console.log('hi')
+$ (() => {
+    //Test button click
+    $('#start').on('click', () => {
+        alert('start');
+    })
+})
