@@ -1,4 +1,6 @@
 $ (() => {
+    //Changed hiding method for modal
+    $('.modal').hide();
 
     //Test start button clickability
     $('#start').on('click', () => {
@@ -14,4 +16,5 @@ $ (() => {
     $('#close').on('click', () => {
         alert('close');
     })
+
 })
