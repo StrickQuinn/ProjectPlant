@@ -3,8 +3,11 @@ $ (() => {
     $('.modal').hide();
     //hide plant until game starts
     $('.plant').hide();
-    // hide try again
+    // hide until they are needed
     $('.incorrect').hide()
+    $('.correct').hide()
+    $('#next').hide()
+    $('#try').hide()
 
     //Test red square clickability
     $('.plant').on('click', () => {
@@ -31,26 +34,30 @@ $ (() => {
         $('#start').show();
     })
 
-    //When you click on answer A, the plant will show, and the level1 screen will hide
+    //When you click on answer A, show correct screen
     $('#a').on('click', () => {
-        $('#level1').hide()
-        $('.plant').show();
+        $('.correct').show()
+        $('.answer').hide();
+        $('#next').show()
     })
 
     //Click on try again and refresh screen with b hidden
     $('#try').on('click', () => {
         $('.incorrect').hide()
         $('#b').hide();
+        $('#try').hide();
     })
 
     //When b is clicked show incorrect screen
     $('#b').on('click', () => {
         $('.incorrect').show();
+        $('#try').show();
     })
 
     //When you click the close button the modal disappears
     $('#close').on('click', () => {
-        $('.modal').hide();
+        $('.modal').hide()
     })
+
     
 })
