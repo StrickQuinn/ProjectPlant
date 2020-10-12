@@ -22,39 +22,46 @@ crossorigin="anonymous"></script>
             <!--Create box for the plant picture in game-->
             <div class="plant">I'm a plant</div>
             <!--Create Start button-->
-            <button id="start">Start</button>
+            <button class="modal-buttons" id="start">Start</button>
         </div>
 
-        <!--Create a modal to start the game-->
+        <!--Setup modal to recommended class names for auto-display adjustment-->
         <div class="modal" id="welcome">
             <div class="modal-content">
                 <h2>Welcome</h2>
-                <p class="start">Learn how to take care of plants</p>
+                <p>Learn how to take care of plants</p>
                 <!--Change close button to play-->
-                <button id="play">Play</button>
+                <div id="modal-footer">
+                    <button class="modal-buttons" id="play">Play</button>
+                    <button class="modal-buttons" id="close">Close</button>
+                </div>                
             </div>
         </div>
 
-        <!--added level 1 modal-->
         <div class="modal" id="level1">
             <div class="modal-content">
-                <h2>Level One</h2>
-                <h3>Question:</h3>
-                <p class="start">What is the correct answer?</p>
-                <!--group answer buttons together-->
-                <div class="answer">
-                    <button id="a">A</button>
-                    <button id="b">B</button>
-                    <button id="c">C</button>
-                    <button id="d">D</button>
+                <div class="modal-container">
+                    <h2>Level One</h2>
+                    <h3>Question:</h3>
+                    <p class="start">What is the correct answer?</p>
+                    <!--group answer buttons together-->
+                    <div class="answer">
+                        <button class="modal-buttons" id="a">A</button>
+                        <button class="modal-buttons" id="b">B</button>
+                        <button class="modal-buttons" id="c">C</button>
+                        <button  class="modal-buttons"id="d">D</button>
+                    </div>
+
+                    <div class="incorrect">
+                        <p>Incorrect.</p>
+                        <button class="modal-buttons" id="try">Try Again</button>
+                    </div>
+                
+                    <!--Have a way to restart the game-->
+                    <footer>
+                        <button class="modal-buttons" id="restart">Restart Game</button>
+                    </footer>
                 </div>
-                <div class="incorrect">
-                    <p>Incorrect.</p>
-                    <button class="try">Try Again</button>
-                </div>
-                <!--Have a way to restart the game-->
-                <footer><button id="restart">Restart Game</button>
-                </footer>
             </div>
         </div>
     </div>

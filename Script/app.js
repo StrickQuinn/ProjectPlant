@@ -8,7 +8,7 @@ $ (() => {
 
     //Test red square clickability
     $('.plant').on('click', () => {
-        alert('plant');
+        $('#start').show();
     });
 
     //When the start button is clicked, hide the start button, and show the welcome
@@ -16,6 +16,7 @@ $ (() => {
         $(event.currentTarget).hide();
         $('#welcome').show();
         $('.container').css({'z-index': -1});
+        $('.plant').hide();
     })
 
     //When the play button is clicked, hide welcome, and show level1
@@ -30,13 +31,26 @@ $ (() => {
         $('#start').show();
     })
 
-    //If a is true, show plant; else,
-
-
-
     //When you click on answer A, the plant will show, and the level1 screen will hide
     $('#a').on('click', () => {
         $('#level1').hide()
         $('.plant').show();
     })
+
+    //Click on try again and refresh screen with b hidden
+    $('#try').on('click', () => {
+        $('.incorrect').hide()
+        $('#b').hide();
+    })
+
+    //When b is clicked show incorrect screen
+    $('#b').on('click', () => {
+        $('.incorrect').show();
+    })
+
+    //When you click the close button the modal disappears
+    $('#close').on('click', () => {
+        $('.modal').hide();
+    })
+    
 })

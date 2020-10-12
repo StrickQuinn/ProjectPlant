@@ -1,8 +1,11 @@
 /*assign flex display for body --- https://flexboxfroggy.com/*/
-body {
+body {margin: 0 auto;
     display: flex;
     text-align: center;
     justify-content: center;
+    /*add background image*/
+    background-image: url('https://i.imgur.com/jgfcNgU.jpg');
+    background-size: cover;
 }
 
 /*create a square to test clickability*/
@@ -12,3 +15,9 @@ body {
     height: 100px;
     width: 100px;
 }
+
+.modal {
+    border: 1px solid black;
+    background: #cccccc;
+}
+
