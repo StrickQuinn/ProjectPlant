@@ -1,3 +1,4 @@
+
 $ (() => {
     //Changed hiding method for modal
     $('.modal').hide();
@@ -9,6 +10,7 @@ $ (() => {
     $('#next').hide()
     $('#try').hide()
     $('.plant-name').hide()
+    $('#home').hide()
     
 
     //Test red square clickability
@@ -73,5 +75,15 @@ $ (() => {
     //When plant is clicked show correct answer//
         $('.plant').on('click', () => {
             $('.plant-name').show()
+            $('#start').hide()
+            $('#home').show();
+    })
+
+    //When home is clicked, take back to start screen
+    $('#home').on('click', () => {
+        $('.plant').hide()
+        $('.plant-name').hide();
+        $('#start').show();
+        $('#home').hide();
     })
 })
