@@ -18,9 +18,12 @@ $ (() => {
     })
 
     //When the close button is clicked, make the modal disappear
-    $('#close').on('click', () => {
+    $('#play').on('click', () => {
         $('.modal').hide();
         //show plant when close is clicked
         $('.plant').show();
     })
+
+
+
 })

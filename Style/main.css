@@ -1,9 +1,10 @@
-/*assign flex display for body*/
+/*assign flex display for body --- https://flexboxfroggy.com/*/
 body {
     display: flex;
     text-align: center;
     justify-content: center;
 }
+
 /*create a square to test clickability*/
 .plant {
     background: red;
@@ -12,6 +13,3 @@ body {
     width: 100px;
 }
 
-.container {
-    position: absolute;
-}

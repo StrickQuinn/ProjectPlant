@@ -24,12 +24,30 @@ crossorigin="anonymous"></script>
             <!--Create Start button-->
             <button id="start">Start</button>
         </div>
+
         <!--Create a modal to start the game-->
-        <div class="modal">
+        <div class="modal" id="welcome">
             <div class="modal-content">
                 <h2>Welcome</h2>
                 <p class="start">Learn how to take care of plants</p>
-                <button id="close">Close</button>
+                <!--Change close button to play-->
+                <button id="play">Play</button>
+            </div>
+        </div>
+
+        <!--added level 1 modals-->
+        <div class="modal" id="level1">
+            <div class="modal-content">
+                <h2>Level One</h2>
+                <h3>Question:</h3>
+                <p class="start">What is the correct answer?</p>
+                <button id="a">A</button>
+                <button id="b">B</button>
+                <button id="c">C</button>
+                <button id="d">D</button>
+                <footer>
+                    <button class="submit">Submit</button>
+                </footer>
             </div>
         </div>
     </div>
