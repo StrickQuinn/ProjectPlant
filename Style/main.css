@@ -19,5 +19,7 @@ body {margin: 0 auto;
 .modal {
     border: 1px solid black;
     background: #cccccc;
+    margin: 20% auto;
+    text-align: center;
 }
 

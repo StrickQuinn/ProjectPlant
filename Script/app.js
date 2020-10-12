@@ -1,7 +1,6 @@
-
 $ (() => {
     //create function to reset things at the home screen
-    const startGame = (e) => {
+    const startGame = () => {
         $('.modal').hide();
         $('.plant').hide();
         $('.incorrect').hide()
@@ -11,6 +10,7 @@ $ (() => {
         $('.plant-name').hide()
         $('#home').hide()
         $('#start').show()
+        $('.level1').hide()
         console.log('hi')
     }
     startGame();
@@ -34,14 +34,13 @@ $ (() => {
 
     //When you click on restart button, return to start screen;
     $('#restart').on('click', () => {
-        $('.modal').hide()
         startGame();
     })
 
     //When you click the close button the modal disappears
     $('#close').on('click', () => {
         $('.modal').hide()
-        $('#start').show()
+        console.log('close')
     })
 
     //When next button is clicked, show plant
