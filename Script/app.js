@@ -23,4 +23,9 @@ $ (() => {
         $('#level1').show();
     })
 
+    //When you click on restart button, return to start screen;
+    $('#restart').on('click', () => {
+        $('.modal').hide()
+        $('#start').show();
+    })
 })
