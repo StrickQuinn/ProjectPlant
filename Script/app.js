@@ -1,6 +1,6 @@
 $ ((e) => {
     //create function to reset things at the home screen
-    const startGame = (e) => {
+    const startGame = () => {
         $('#start').show()
         $('.modal').hide();
         $('.plant').hide();
@@ -12,7 +12,7 @@ $ ((e) => {
         $('#home').hide()
         $('#start').show()
         $('.level').hide()
-        $('.answers').show();
+        $('.answer').show();
         console.log('hi')
     }
     startGame();
@@ -56,19 +56,23 @@ $ ((e) => {
     $('#restart').on('click', () => {
         $('.level').hide();
         goHome();
+        startGame();
+        console.log('hit restart button')
     })
 
-    // //When you click the close button the modal disappears
-    // $('#close').on('click', () => {
-    //     $('.modal').hide()
-    //     $('#start').show()
-    //     console.log('close')
-    // })
+    //When you click the close button the modal disappears
+    $('#close').on('click', () => {
+        $('.modal').hide()
+        $('#start').show()
+        console.log('close')
+    })
 
     //When next button is clicked, show plant
     $('#next').on('click', () => {
         $('.level').hide();
         $('.plant').show();
+        $('.answer').show();
+        console.log('next scene')
     })
 
     //Click on try again and refresh screen with b hidden
@@ -76,6 +80,7 @@ $ ((e) => {
         $('.incorrect').hide()
         $('#b').hide();
         $('#try').hide();
+        console.log('try again')
     })
 
     //When home is clicked, take back to start screen
@@ -83,6 +88,7 @@ $ ((e) => {
         $('.incorrect').hide()
         $('.correct').hide()
         goHome();
+        console.log('bye')
     })
 
     //When you click on answer A, show correct screen
@@ -90,18 +96,21 @@ $ ((e) => {
         $('.correct').show()
         $('.answer').hide();
         $('#next').show()
+        console.log('correct answer')
     })
 
     //When b is clicked show incorrect screen
-    // $('#b').on('click', () => {
-    //     $('.incorrect').show();
-    //     $('#try').show();
-    // })
+    $('#b').on('click', () => {
+        $('.incorrect').show();
+        $('#try').show();
+        console.log('wrong answer')
+    })
 
     //When plant is clicked show correct answer//
         $('.plant').on('click', () => {
             $('.plant-name').show()
             $('#start').hide()
             $('#home').show();
+            console.log('plant')
     })
 })
