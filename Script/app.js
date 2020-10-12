@@ -1,9 +1,10 @@
 $ (() => {
     //Changed hiding method for modal
     $('.modal').hide();
-
     //hide plant until game starts
     $('.plant').hide();
+    // hide try again
+    $('.incorrect').hide()
 
     //Test red square clickability
     $('.plant').on('click', () => {
@@ -28,6 +29,10 @@ $ (() => {
         $('.modal').hide()
         $('#start').show();
     })
+
+    //If a is true, show plant; else,
+
+
 
     //When you click on answer A, the plant will show, and the level1 screen will hide
     $('#a').on('click', () => {
