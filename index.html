@@ -14,7 +14,7 @@ crossorigin="anonymous"></script>
     <script src="script/app.js"></script>
 </head>
 <body>
-    <div class="form">
+    <form class="form">
         <!--Create container for game-->
         <div class="container">
             <!--Create box for the plant picture in game-->
@@ -37,37 +37,36 @@ crossorigin="anonymous"></script>
                 </div>                
             </div>
         </div>
-
+        <!--took this out of a modal, because the screen was too busy-->
         <div class="level1">
-                    <h2>Level One</h2>
-                    <h3>Question:</h3>
-                    <p class="start">What is the correct answer?</p>
-                    <!--group answer buttons together-->
-                    <div class="answer">
-                        <button class="modal-buttons" id="a">A</button>
-                        <button class="modal-buttons" id="b">B</button>
-                        <button class="modal-buttons" id="c">C</button>
-                        <button  class="modal-buttons"id="d">D</button>
-                    </div>
-                    <!--add display option for correct-->
-                    <div class="correct">
-                        <p>Correct.The answer is A</p>
-                    </div>
-                    <!--display option for incorrect-->
-                    <div class="incorrect">
-                        <p>Incorrect.</p>
-                    </div>
-                    <!--Have a way to restart the game-->
-                        <button class="modal-buttons" id="next">Next</button>
-                        <button class="modal-buttons" id="try">Try Again</button>
-                        <button class="modal-buttons" id="restart">Restart Game</button>
-                        <button class="modal-buttons" id="close">Close</button>
-                    </footer>
-                </div>
+            <h2>Level One</h2>
+            <h3>Question:</h3>
+            <p class="start">What is the correct answer?</p>
+            <!--group answer buttons together-->
+            <div class="answer">
+                <button id="a">A</button>
+                <button id="b">B</button>
+                <button id="c">C</button>
+                <button id="d">D</button>
             </div>
+            <!--add display option for correct-->
+            <div class="correct">
+                <p>Correct.The answer is A</p>
+            </div>
+            <!--display option for incorrect-->
+            <div class="incorrect">
+                <p>Incorrect.</p>
+            </div>
+            <footer>
+            <!--Have a way to restart the game-->
+                <button id="next">Next</button>
+                <button id="try">Try Again</button>
+                <button id="restart">Restart Game</button>
+            </footer>
         </div>
-    </div>
-
+    </form>
+    
+<!--bootstrap documentation to help with modal layout-->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 
