@@ -8,6 +8,8 @@ $ (() => {
     $('.correct').hide()
     $('#next').hide()
     $('#try').hide()
+    $('.plant-name').hide()
+    
 
     //Test red square clickability
     $('.plant').on('click', () => {
@@ -19,7 +21,9 @@ $ (() => {
         $(event.currentTarget).hide();
         $('#welcome').show();
         $('.container').css({'z-index': -1});
+        $('.plant-name').hide();
         $('.plant').hide();
+        
     })
 
     //When the play button is clicked, hide welcome, and show level1
@@ -57,7 +61,17 @@ $ (() => {
     //When you click the close button the modal disappears
     $('#close').on('click', () => {
         $('.modal').hide()
+        $('#start').show()
     })
 
-    
+    //When next button is clicked, show plant
+    $('#next').on('click', () => {
+        $('.modal').hide();
+        $('.plant').show();
+    })
+
+    //When plant is clicked show correct answer//
+        $('.plant').on('click', () => {
+            $('.plant-name').show()
+    })
 })
