@@ -2,6 +2,7 @@
 body {
     display: flex;
     text-align: center;
+    justify-content: center;
 }
 /*create a square to test clickability*/
 .plant {
@@ -11,4 +12,6 @@ body {
     width: 100px;
 }
 
-
+.container {
+    position: absolute;
+}
