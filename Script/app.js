@@ -17,4 +17,8 @@ $ (() => {
         alert('close');
     })
 
+    //When the start button is clicked, show the modal class
+    $('#start').on('click', () => {
+        $('.modal').show();
+    })
 })

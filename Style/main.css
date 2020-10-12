@@ -1,6 +1,7 @@
 /*assign flex display for body*/
 body {
     display: flex;
+    text-align: center;
 }
 /*create a square to test clickability*/
 .plant {
@@ -10,11 +11,4 @@ body {
     width: 100px;
 }
 
-/*positioned modal behind red square*/
-.modal {
-    position: absolute;
-    z-index: -1;
-    /*Make the modal hide*/
-    opacity: 1;
-}
 
