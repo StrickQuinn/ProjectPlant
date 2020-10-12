@@ -14,23 +14,25 @@ crossorigin="anonymous"></script>
     <script src="script/app.js"></script>
 </head>
 <body>
-    <form class="form">
+    <document>
         <!--Create container for game-->
         <div class="container">
             <!--Create box for the plant picture in game-->
-            <div class="plant">I'm a plant</div>
+            <div class="plant">
+                <img src="https://i.imgur.com/qgkZx1s.jpg?1">
+            </div>
             <div class="plant-name">My plant name</div>
             <!--Create Start button-->
             <button class="modal-buttons" id="start">Start</button>
             <button class="modal-buttons" id="home">Home</button>
         </div>
         <!--Setup modal to recommended class names for auto-display adjustment-->
-        <div class="modal" id="welcome">
-            <div class="modal-content">
-                <h2>Welcome</h2>
-                <p>Learn how to take care of plants</p>
+        <div class="modal" id="welcome" role="dialog">
+            <div class="modal-content" role="document">
+                <div class="modal-header=">Welcome</div>
+                <div class ="modal-body">Learn how to take care of plants</div>
                 <!--Change close button to play-->
-                <div id="modal-footer">
+                <div class="modal-footer">
                     <button class="modal-buttons" id="play">Play</button>
                     <button class="modal-buttons" id="close">Close</button>
                 </div>                
@@ -40,14 +42,14 @@ crossorigin="anonymous"></script>
         <!--added an id to level class-->
         <div class="level" id="one">
             <h2>Level One</h2>
-            <h3>Question:</h3>
-            <p class="start">What is the correct answer?</p>
+            <h3>Question 1</h3>
+            <p class="start">What writing instrument usually has an eraser?</p>
             <!--group answer buttons together-->
             <div class="answer">
-                <button id="a">A</button>
-                <button id="b">B</button>
-                <button id="c">C</button>
-                <button id="d">D</button>
+                <button id="a">pencil</button>
+                <button id="b">marker</button>
+                <button id="c">paintbrush</button>
+                <button id="d">pen</button>
             </div>
             <!--add display option for correct-->
             <div class="correct">
@@ -64,7 +66,7 @@ crossorigin="anonymous"></script>
                 <button id="restart">Restart Game</button>
             </footer>
         </div>
-    </form>
+    </document>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

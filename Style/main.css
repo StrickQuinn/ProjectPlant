@@ -9,24 +9,44 @@ body {
     background-image: url('https://i.imgur.com/jgfcNgU.jpg');
     background-size: cover;
 }
+.container {
+    text-align: center;
+}
+
 /*create a square to test clickability*/
 .plant {
+    display: none;
     background: red;
     border: 1px solid black;
-    height: 100px;
-    width: 100px;
 }
-.modal {
+
+/*Adjust modal size*/
+.modal-content {
+    background: white;
     border: 1px solid black;
     background: #cccccc;
-    margin: 20% auto;
     text-align: center;
     position: fixed;
+    padding: 0 40px;
 }
 
 .level {
+    display: none;
     background: rgba(211, 211, 211, .6);
     text-align: center;
     border: 2px solid black;
     padding: 10px;
+}
+
+
+img {
+    height: 400px;
+    display: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#welcome {
+    text-align: center;
+    position: relative;
 }

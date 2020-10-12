@@ -1,6 +1,10 @@
 
 
 $ ((e) => {
+    //Keep screen from auto-refresh when button is clicked
+    $('button').on('click', (e) => {
+        e.preventDefault();
+    })
     //create function to reset things at the home screen
     const startGame = () => {
         $('#start').show()
@@ -26,18 +30,14 @@ $ ((e) => {
         console.log('went home')
     }
     
-    //Keep screen from auto-refresh when button is clicked
-    $('button').on('click', (e) => {
-        e.preventDefault();
-    })
-    //Test red square clickability
+    //Picture of Gecky Le Gecko
     $('.plant').on('click', () => {
         $('#start').show();
     });
     //When the start button is clicked, bring Welcome screen in front of the container
     $('#start').on('click', () => {
         $('#start').hide();
-        $('#welcome').show().css({'z-index': 1});
+        $('#welcome').show()
         console.log('start')
     })
     //When the play button is clicked, hide welcome, and show level1
@@ -85,20 +85,20 @@ $ ((e) => {
         console.log('bye')
     })
 
-    //When you click on answer A, show correct screen
-    $('#a').on('click', () => {
-        $('.correct').show()
-        $('.answer').hide();
-        $('#next').show()
-        console.log('correct answer')
-    })
+    // //When you click on answer A, show correct screen
+    // $('#a').on('click', () => {
+    //     $('.correct').show()
+    //     $('.answer').hide();
+    //     $('#next').show()
+    //     console.log('correct answer')
+    // })
 
-    //When b is clicked show incorrect screen
-    $('#b').on('click', () => {
-        $('.incorrect').show();
-        $('#try').show();
-        console.log('wrong answer')
-    })
+    // //When b is clicked show incorrect screen
+    // $('#b').on('click', () => {
+    //     $('.incorrect').show();
+    //     $('#try').show();
+    //     console.log('wrong answer')
+    // })
 
     //When plant is clicked show correct answer//
         $('.plant').on('click', () => {
