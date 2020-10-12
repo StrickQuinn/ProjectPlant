@@ -17,3 +17,8 @@ body {
     /*Make the modal hide*/
     opacity: 0;
 }
+
+/*Style the modal by id for when it shows*/
+#show {
+    opacity: 1;
+}

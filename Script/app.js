@@ -9,4 +9,6 @@ $ (() => {
     $('.plant').on('click', () => {
         alert('plant')
     });
+
+    
 })
