@@ -28,4 +28,10 @@ $ (() => {
         $('.modal').hide()
         $('#start').show();
     })
+
+    //When you click on answer A, the plant will show, and the level1 screen will hide
+    $('#a').on('click', () => {
+        $('#level1').hide()
+        $('.plant').show();
+    })
 })
