@@ -12,8 +12,8 @@ body {
 
 /*positioned modal behind red square*/
 .modal {
-    position: absolute;
-    z-index: -1;
+    /*position: absolute;
+    z-index: -1;*/
     /*Make the modal hide*/
     opacity: 0;
 }

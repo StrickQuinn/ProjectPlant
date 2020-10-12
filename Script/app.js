@@ -7,8 +7,11 @@ $ (() => {
 
     //Test red square clickability
     $('.plant').on('click', () => {
-        alert('plant')
+        alert('plant');
     });
 
-    
+    //Test close button clickability
+    $('#close').on('click', () => {
+        alert('close');
+    })
 })
