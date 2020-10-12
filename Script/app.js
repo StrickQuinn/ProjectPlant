@@ -5,7 +5,7 @@ $ (() => {
         alert('start');
     });
 
-    //Test req square clickability
+    //Test red square clickability
     $('.plant').on('click', () => {
         alert('plant')
     });

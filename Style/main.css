@@ -1,7 +1,17 @@
+/*assign flex display for body*/
+body {
+    display: flex;
+}
 /*create a square to test clickability*/
 .plant {
     background: red;
     border: 1px solid black;
     height: 100px;
     width: 100px;
+}
+
+/*positioned modal behind red square*/
+.modal {
+    position: absolute;
+    z-index: -1;
 }
