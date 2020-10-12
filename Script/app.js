@@ -10,20 +10,17 @@ $ (() => {
         alert('plant');
     });
 
-    //When the start button is clicked, hide the start button &show the modal class
+    //When the start button is clicked, hide the start button, and show the welcome
     $('#start').on('click', () => {
-        $(event.currentTarget).hide()
-        $('.modal').show();
+        $(event.currentTarget).hide();
+        $('#welcome').show();
         $('.container').css({'z-index': -1});
     })
 
-    //When the close button is clicked, make the modal disappear
+    //When the play button is clicked, hide welcome, and show level1
     $('#play').on('click', () => {
-        $('.modal').hide();
-        //show plant when close is clicked
-        $('.plant').show();
+        $('#welcome').hide();
+        $('#level1').show();
     })
-
-
 
 })
