@@ -10,8 +10,6 @@ $ ((e) => {
         $('#start').show()
         $('.modal').hide();
         $('.plant').hide();
-        $('.incorrect').hide()
-        $('.correct').hide()
         $('#next').hide()
         $('#try').hide()
         $('.plant-name').hide()
@@ -43,7 +41,9 @@ $ ((e) => {
     //When the play button is clicked, hide welcome, and show level1
     $('#play').on('click', () => {
         $('#welcome').hide();
-        $('.level').show();
+        $('#example').show();
+        //$('.level').show();
+        $('#next').show();
         $('.answer').show();
         console.log('play');
     })
@@ -63,15 +63,14 @@ $ ((e) => {
 
     //When next button is clicked, show plant
     $('#next').on('click', () => {
-        $('.level').hide();
-        $('.plant').show();
-        $('.answer').show();
+        $('#example').hide();
+        $('#one').show()
+        //$('.plant').show();
         console.log('next scene')
     })
 
     //Click on try again and refresh screen with b hidden
     $('#try').on('click', () => {
-        $('.incorrect').hide()
         $('#b').hide();
         $('#try').hide();
         console.log('try again')
@@ -79,8 +78,6 @@ $ ((e) => {
 
     //When home is clicked, take back to start screen
     $('#home').on('click', () => {
-        $('.incorrect').hide()
-        $('.correct').hide()
         goHome();
         console.log('bye')
     })
