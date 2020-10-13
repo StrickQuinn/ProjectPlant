@@ -19,6 +19,7 @@ $ ((e) => {
         console.log('hi')
     }
     startGame();
+
     const goHome = () => {
         $('.plant').hide()
         $('.plant-name').hide();
@@ -47,6 +48,7 @@ $ ((e) => {
         $('.answer').show();
         console.log('play');
     })
+
     //When you click on restart button, return to start screen;
     $('#restart').on('click', () => {
         $('.level').hide();
@@ -54,6 +56,7 @@ $ ((e) => {
         startGame();
         console.log('hit restart button')
     })
+
     //When you click the close button the modal disappears
     $('#close').on('click', () => {
         $('.modal').hide()
@@ -61,6 +64,10 @@ $ ((e) => {
         console.log('close')
     })
 
+
+
+
+    const rounds = []
     //When next button is clicked, show plant
     $('#next').on('click', () => {
         $('#example').hide();
@@ -68,6 +75,14 @@ $ ((e) => {
         //$('.plant').show();
         console.log('next scene')
     })
+
+
+
+
+
+
+
+
 
     //Click on try again and refresh screen with b hidden
     $('#try').on('click', () => {

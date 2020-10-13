@@ -7,27 +7,22 @@ $ (() => {
     });
 
 //create an array for the levels    
-    const $example = $('#example')
+    const $example = $('#example').text()
     const $one = $('#one')
     const $two = $('#two')
     const $three = $('#three')
     const $four = $('#four')
     const $five = $('#five')
-
     const levelNumber = [$example, $one, $two, $three, $four, $five]
-    console.log(levelNumber)
 
 
-
-//create an object for the correct answers
-    const correctChoice = {
-        $example : 'pencil',
-        $one : 'dragons',
-        $two : 'pearls',
-        $three : 'Pickles',
-        $four : 'Donkey',
-        $five : 'Chicken'
-    }    
+//give player options to choose    
+    let $a = $('#a').text()
+    let $b = $('#b').text()
+    let $c = $('#c').text()
+    let $d = $('#d').text()
+    playerAnswer = [$a, $b, $c, $d]
+    console.log(playerAnswer[1])
 
 
 
@@ -40,15 +35,8 @@ $ (() => {
 
 
 
+    /////Will use a version of this to check player's choice
 
-
-
-    // /////Will use a version of this to check player's choice
-    // let $a = $('#a')
-    // let $b = $('#b')
-    // let $c = $('#c')
-    // let $d = $('#d')
-    // let $answer = $('.answer')
     // let correctChoice = $a.text()
     // const choice = () => {
     //     $a.on('click', () => {
