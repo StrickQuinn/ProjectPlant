@@ -84,22 +84,6 @@ $ ((e) => {
         goHome();
         console.log('bye')
     })
-
-    // //When you click on answer A, show correct screen
-    // $('#a').on('click', () => {
-    //     $('.correct').show()
-    //     $('.answer').hide();
-    //     $('#next').show()
-    //     console.log('correct answer')
-    // })
-
-    // //When b is clicked show incorrect screen
-    // $('#b').on('click', () => {
-    //     $('.incorrect').show();
-    //     $('#try').show();
-    //     console.log('wrong answer')
-    // })
-
     //When plant is clicked show correct answer//
         $('.plant').on('click', () => {
             $('.plant-name').show()
