@@ -19,6 +19,20 @@ $ (() => {
 
 
 
+//create an object for the correct answers
+    const correctChoice = {
+        $example : 'pencil',
+        $one : 'dragons',
+        $two : 'pearls',
+        $three : 'Pickles',
+        $four : 'Donkey',
+        $five : 'Chicken'
+    }    
+
+
+
+
+
 
 
 
