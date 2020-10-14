@@ -5,15 +5,6 @@ $ (() => {
     $('button').on('click', (e) => {
         e.preventDefault();
     });
-//create an array for the levels    
-    const $example = $('#example').text()
-    const $one = $('#one')
-    const $two = $('#two')
-    const $three = $('#three')
-    const $four = $('#four')
-    const $five = $('#five')
-    const levelNumber = [$example, $one, $two, $three, $four, $five]
-
 
 //give player options to choose    
     let $a = $('#a').text()

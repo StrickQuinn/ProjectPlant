@@ -10,6 +10,7 @@ body {
     background-size: cover;
 }
 .container {
+    justify-content: center;
     text-align: center;
 }
 

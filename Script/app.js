@@ -16,6 +16,7 @@ $ ((e) => {
         $('#home').hide()
         $('#start').show()
         $('.level').hide()
+        $('#restart').hide()
         console.log('hi')
     }
     startGame();
@@ -44,6 +45,7 @@ $ ((e) => {
         $('#welcome').hide();
         $('#example').show();
         $('#next').show()
+        $('#restart').show()
         console.log('play');
     })
 
@@ -63,13 +65,15 @@ $ ((e) => {
     })
 
 
+    
 
     let currentLevel = 0
     //When next button is clicked, show 
     $('#next').on('click', () => {
+        $('#example').hide()
         currentLevel++
         $(`#${currentLevel}`).show()
-        $(`#${currentLevel}` - 1).hide()
+        $(`#${currentLevel}`).prev().hide()
         console.log('next button')
     })
 
