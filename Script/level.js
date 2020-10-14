@@ -20,6 +20,9 @@ $ (() => {
 
 
 
+
+
+
     /////Will use a version of this to check player's choice
 
     // let correctChoice = $a.text()
