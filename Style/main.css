@@ -50,3 +50,7 @@ img {
     text-align: center;
     position: relative;
 }
+
+correctAnswer {
+    display: none;
+}

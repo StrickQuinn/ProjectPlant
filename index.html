@@ -22,12 +22,12 @@ crossorigin="anonymous"></script>
             <div class="plant">
                 <img src="https://i.imgur.com/qgkZx1s.jpg?1">
             </div>
-            <div class="plant-name">My plant name</div>
+            <div class="plant-name">My name is Gecky Le Gecko</div>
             <!--Create Start button-->
             <button class="modal-buttons" id="start">Start</button>
             <button class="modal-buttons" id="home">Home</button>
         </div>
-        <!--Setup modal to recommended class names for auto-display adjustment... -->
+        <!--Setup modal to recommended class names for auto-display adjustment... https://getbootstrap.com/docs/4.2/components/modal/-->
         <div class="modal" id="welcome" role="dialog">
             <div class="modal-content" role="document">
                 <h5 class="modal-header">"So I hear you need money..."</h5>
@@ -45,31 +45,100 @@ crossorigin="anonymous"></script>
                 </div>                
             </div>
         </div>
-        <!--took this out of a modal, because the screen was too busy-->
-        <!--added an id to level class-->
+
+
+        <!--create question/answer format and repeat-->
         <div class="level" id="example">
             <h2>Example</h2>
-            <h3>Question 1</h3>
-            <p class="start">What writing instrument usually has an eraser?</p>
-            <!--group answer buttons together-->
-            <div class="answer">
+            <h3>Question</h3>
+            <p class="question">What writing instrument usually has an eraser?</p>
                 <button id="a">pencil</button>
                 <button id="b">marker</button>
                 <button id="c">paintbrush</button>
                 <button id="d">pen</button>
-            </div>
-            <!--add display option for correct-->
-            <div class="correct">
-                <p>Correct.The answer is A</p>
-            </div>
-            <!--display option for incorrect-->
-            <div class="incorrect">
-                <p>Incorrect.</p>
-            </div>
+                <div id="correctAnswer">pencil</div>
             <footer>
-            <!--Have a way to restart the game-->
                 <button id="next">Next</button>
-                <button id="try">Try Again</button>
+                <button id="restart">Restart Game</button>
+            </footer>
+        </div>
+
+        <!--Game of Thrones series by Georgie R. R. Martin-->
+        <div class="level" id="one">
+            <h2>1 of 5</h2>
+            <h3>Question 1</h3>
+            <p class="question">In <i>Game of Thrones</i>, Daenerys is known as the queen of these.</p>
+                <button class="playerAnswer" id="a">dragons</button>
+                <button class="playerAnswer" id="b">direwolves</button>
+                <button class="playerAnswer" id="c">warthogs</button>
+                <button class="playerAnswer" id="d">bears</button>
+                <div id="correctAnswer">dragons</div>
+            <footer>
+                <button id="next">Next</button>
+                <button id="restart">Restart Game</button>
+            </footer>
+        </div>
+
+        <!--The Simpsons by Matt Groening-->
+        <div class="level" id="two">
+            <h2>2 of 5</h2>
+            <h3>Question 2</h3>
+            <p class="question">What kind of necklace does Lisa Simpson wear?</p>
+                <button id="a">pearls</button>
+                <button id="b">diamonds</button>
+                <button id="c">turquoise</button>
+                <button id="d">amber</button>
+                <div id="correctAnswer">pearls</div>
+            <footer>
+                <button id="next">Next</button>
+                <button id="restart">Restart Game</button>
+            </footer>
+        </div>
+
+        <!--Rugrats by Arlene Klasky and Gabor Csupo-->
+        <div class="level" id="three">
+            <h2>3 of 5</h2>
+            <h3>Question 3</h3>
+            <p class="question">In <i>Rugrats</i>, What is Tommy's last name?</p>
+                <button id="a">Pickles</button>
+                <button id="b">Potatoes</button>
+                <button id="c">Mayonnaise</button>
+                <button id="d">Peters</button>
+                <div id="correctAnswer">Pickles</div>
+            <footer>
+                <button id="next">Next</button>
+                <button id="restart">Restart Game</button>
+            </footer>
+        </div>
+
+        <!--Shrek! by William Steig-->
+        <div class="level" id="four">
+            <h2>4 of 5</h2>
+            <h3>Question 4</h3>
+            <p class="question">Who is one of Shrek's best friends?</p>
+                <button id="a">Donkey</button>
+                <button id="b">Cow</button>
+                <button id="c">Peter</button>
+                <button id="d">Chicken</button>
+                <div id="correctAnswer">Donkey</div>
+            <footer>
+                <button id="next">Next</button>
+                <button id="restart">Restart Game</button>
+            </footer>
+        </div>
+
+        <!--Harry Potter by J. K. Rowling-->
+        <div class="level" id="five">
+            <h2>5 of 5</h2>
+            <h3>Question 5</h3>
+            <p class="question">What animal can Voldemort speak with?</p>
+                <button id="a">snake</button>
+                <button id="b">spider</button>
+                <button id="c">puppy</button>
+                <button id="d">horse</button>
+                <div id="correctAnswer">snake</div>
+            <footer>
+                <button id="next">Next</button>
                 <button id="restart">Restart Game</button>
             </footer>
         </div>

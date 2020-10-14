@@ -45,6 +45,7 @@ $ ((e) => {
         $('#welcome').hide();
         $('.level').show();
         $('.answer').show();
+        $('#next').show
         console.log('play');
     })
     //When you click on restart button, return to start screen;
