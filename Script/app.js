@@ -15,6 +15,7 @@ $ ((e) => {
         $('.plant-name').hide()
         $('#home').hide()
         $('#start').show()
+        $('.level').hide()
         console.log('hi')
     }
     startGame();
@@ -60,7 +61,7 @@ $ ((e) => {
 
 
 
-    let currentLevel = $('#0')
+    let currentLevel = 0
     //When next button is clicked, show 
     $('#next').on('click', () => {
         currentLevel++
