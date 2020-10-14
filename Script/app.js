@@ -5,7 +5,7 @@ $(() => {
         e.preventDefault()
     })
 
-    //To start the game, hide the home button
+    //To start the game, hide the home button, the level container
     const startGame = () => {
         $('#home').hide()
         $('.level-container').hide()
@@ -21,10 +21,26 @@ $(() => {
         console.log('start button')
     })
 
-    //when you click the play button, add a div with class level and id 0
+    //when you click the play button, show the level container
     let $div = $('<div>').addClass('level').attr('id', '0')
     $('#play').on('click', () => {
         $('.modal').hide()
         $('.level-container').show()
     })
+
+
+    //when you click the a button, if the text equals correctAnswer text, you are correct
+        let $a = $('#a').text()
+        let $b = $('#b').text()
+        let $c = $('#c').text()
+        let $d = $('#d').text()
+        let $correct = $('.correctAnswer').text()
+
+        $('#a').on('click', () => {
+            if ($a === $correct) {
+                console.log('yay')
+            }else {
+                console.log('noooo')
+            }
+        })
 })
