@@ -26,42 +26,50 @@ $(() => {
     $('#play').on('click', () => {
         $('.modal').hide()
         $('.level-container').show()
+        playerAnswer();
     })
 
 
-    //when you click the a button, if the text equals correctAnswer text, you are correct
-        let $a = $('#a').text()
-        let $b = $('#b').text()
-        let $c = $('#c').text()
-        let $d = $('#d').text()
-        let $correct = $('.correctAnswer').text()
+    //when you click the a button, if the text equals correctAnswer text, you are correct;
+    //hide choice buttons
+    let $a = $('#a').text()
+    let $b = $('#b').text()
+    let $c = $('#c').text()
+    let $d = $('#d').text()
+    let $correct = $('.correctAnswer').text()
+    
 
+    //create a playGame fxn to wrapt whether or not the answer is correct
+    const playerAnswer = () => {
         $('#a').on('click', () => {
             if ($a === $correct) {
-                console.log('yay')
+                return true
             }else {
                 console.log('noooo')
             }
-        })
+        });
         $('#b').on('click', () => {
             if ($b === $correct) {
-                console.log('yay')
+                return true
             }else {
                 console.log('noooo')
             }
-        })
+        });
         $('#c').on('click', () => {
             if ($c === $correct) {
-                console.log('yay')
+                return true
             }else {
                 console.log('noooo')
             }
-        })
+        });
         $('#d').on('click', () => {
             if ($d === $correct) {
                 console.log('yay')
+                return true
             }else {
                 console.log('noooo')
             }
         })
+    }
+
 })
