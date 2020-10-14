@@ -43,9 +43,13 @@ $ ((e) => {
     $('#play').on('click', () => {
         $('#welcome').hide();
         $('#example').show();
+<<<<<<< HEAD
         //$('.level').show();
         $('#next').show();
         $('.answer').show();
+=======
+        $('#next').show()
+>>>>>>> tmp
         console.log('play');
     })
 
@@ -66,6 +70,7 @@ $ ((e) => {
 
 
 
+<<<<<<< HEAD
 
     const rounds = []
     //When next button is clicked, show plant
@@ -74,6 +79,15 @@ $ ((e) => {
         $('#one').show()
         //$('.plant').show();
         console.log('next scene')
+=======
+    let currentLevel = 0
+    //When next button is clicked, show 
+    $('#next').on('click', () => {
+        currentLevel++
+        $(`#${currentLevel}`).show()
+        $(`#${currentLevel}` - 1).hide()
+        console.log('next button')
+>>>>>>> tmp
     })
 
 
@@ -81,9 +95,12 @@ $ ((e) => {
 
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> tmp
     //Click on try again and refresh screen with b hidden
     $('#try').on('click', () => {
         $('#b').hide();

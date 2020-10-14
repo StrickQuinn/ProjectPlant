@@ -6,6 +6,7 @@ $ (() => {
         e.preventDefault();
     });
 
+<<<<<<< HEAD
 //create an array for the levels    
     const $example = $('#example').text()
     const $one = $('#one')
@@ -23,6 +24,13 @@ $ (() => {
     let $d = $('#d').text()
     playerAnswer = [$a, $b, $c, $d]
     console.log(playerAnswer[1])
+=======
+    
+
+
+
+
+>>>>>>> tmp
 
 
 

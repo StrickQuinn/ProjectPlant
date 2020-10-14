@@ -31,7 +31,6 @@ body {
 }
 
 .level {
-    display: none;
     background: rgba(211, 211, 211, .6);
     text-align: center;
     border: 2px solid black;
@@ -49,4 +48,8 @@ img {
 #welcome {
     text-align: center;
     position: relative;
+}
+
+#correctAnswer {
+    display: none;
 }
