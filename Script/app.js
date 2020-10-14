@@ -43,4 +43,11 @@ $(() => {
                 console.log('noooo')
             }
         })
+        $('#b').on('click', () => {
+            if ($b === $correct) {
+                console.log('yay')
+            }else {
+                console.log('noooo')
+            }
+        })
 })
