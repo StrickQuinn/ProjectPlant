@@ -50,4 +50,18 @@ $(() => {
                 console.log('noooo')
             }
         })
+        $('#c').on('click', () => {
+            if ($c === $correct) {
+                console.log('yay')
+            }else {
+                console.log('noooo')
+            }
+        })
+        $('#d').on('click', () => {
+            if ($d === $correct) {
+                console.log('yay')
+            }else {
+                console.log('noooo')
+            }
+        })
 })
