@@ -7,6 +7,22 @@ $ (() => {
     });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //create a fxn to check for the correct answer
 const checkAnswer = () => {
     if ($('.playerAnswer') == $('.correctAnswer')) {
