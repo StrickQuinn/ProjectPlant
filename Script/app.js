@@ -37,39 +37,54 @@ $(() => {
     let $c = $('#c').text()
     let $d = $('#d').text()
     let $correct = $('.correctAnswer').text()
+    let $result = $('.result')
     
 
-    //create a playGame fxn to wrapt whether or not the answer is correct
+    //create a playGame fxn to wrap whether or not the answer is correct
+    //when the button is clicked, remove all buttons
     const playerAnswer = () => {
         $('#a').on('click', () => {
+            $('.playerChoice').hide()
             if ($a === $correct) {
-                return true
+                $result.text('correct')
             }else {
-                console.log('noooo')
+                $result.text('incorrect')
             }
         });
         $('#b').on('click', () => {
+            $('.playerChoice').hide()
             if ($b === $correct) {
-                return true
+                $result.text('correct')
             }else {
-                console.log('noooo')
+                $result.text('incorrect')
             }
         });
         $('#c').on('click', () => {
+            $('.playerChoice').hide()
             if ($c === $correct) {
-                return true
+                $result.text('correct')
             }else {
-                console.log('noooo')
+                $result.text('incorrect')
             }
         });
         $('#d').on('click', () => {
+            $('.playerChoice').hide()
             if ($d === $correct) {
                 console.log('yay')
-                return true
+                $result.text('correct')
             }else {
-                console.log('noooo')
+                $result.text('incorrect')
             }
         })
     }
 
+    const showResult = () => {
+        if (playerAnswer() == true) {
+            $('#result').text('Correct!')
+            console.log('yippee')
+        }else {
+            $('#result').text('sad')
+        }
+    }
+    showResult()
 })
