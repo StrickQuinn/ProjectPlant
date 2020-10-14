@@ -8,6 +8,8 @@ $(() => {
     //To start the game, hide the home button
     const startGame = () => {
         $('#home').hide()
+        $('.level-container').hide()
+        $('.correctAnswer').hide()
         console.log('main page')
     }
     startGame()
@@ -23,7 +25,6 @@ $(() => {
     let $div = $('<div>').addClass('level').attr('id', '0')
     $('#play').on('click', () => {
         $('.modal').hide()
-        $div.insertAfter('.modal')
-        console.log('pressed play button')
+        $('.level-container').show()
     })
 })
