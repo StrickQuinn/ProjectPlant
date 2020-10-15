@@ -31,13 +31,12 @@ body {
     margin: 25% 0;
 }
 
-.level-container {
+.level-container, .wallet-container, .end-container {
     background: rgba(211, 211, 211, .6);
     text-align: center;
     border: 2px solid black;
     padding: 10px;
 }
-
 
 img {
     height: 400px;

@@ -7,6 +7,8 @@ $(() => {
 
     //To start the game, hide the home button, the level container
     const startGame = () => {
+        $('.end-container').hide()
+        $('.wallet-container').hide()
         $('#home').hide()
         $('.level-container').hide()
         $('.correctAnswer').hide()

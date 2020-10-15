@@ -30,9 +30,9 @@ crossorigin="anonymous"></script>
                 <p class="modal-body">Aunt Begonia will help you earn extra cash by caring for her plants,<br />
                 but first, you have to show her you know what to do.<br />
                 <br />
-                Answer the questions that will give you a hint to the plant's name to earn $3.<br />
+                Answer the questions that will give you a hint to the plant's name to earn $5.<br />
                 Match the plant name to the plant for $5.<br />
-                Aunt Begonia will trust you once you've answered enough correctly to earn $30.<br />
+                Aunt Begonia will trust you once you've answered enough correctly to earn $20.<br />
                 Good Luck!</p>
                 <!--Change close button to play-->
                 <div class="modal-footer">
@@ -44,7 +44,7 @@ crossorigin="anonymous"></script>
 
         <!--added a level-container to siphon values through-->
         <div class="level-container">
-            <div class="level" id="0">Example</div>
+            <div class="level">Example</div>
             <p class="question">What writing tool usually has an eraser?</p>
             <button class="playerChoice" id="a">pen</button>
             <button class="playerChoice" id="b">marker</button>
@@ -58,6 +58,14 @@ crossorigin="anonymous"></script>
             <button class="restart">Restart Game</button>
             <button class="continue">Continue</button>
             <button class="next">Next</button>
+        </div>
+
+        <!--make a container to show your what you've earned & tell you what round you are on-->
+        <div class="wallet-container">
+            <div class="wallet">Your Wallet($):</div>
+            <div class="wallet-total">0</div>
+            <div class="round-name">Level</div>
+            <div class="round-number">0</div>
         </div>
 
         <!--make end of game container-->
