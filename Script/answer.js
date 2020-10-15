@@ -4,7 +4,6 @@ $(() => {
     })
 
      //when you click the play button, show the level container
-    let $div = $('<div>').addClass('level').attr('id', '0')
     $('#play').on('click', () => {
         $('.modal').hide()
         $('.level-container').show()
@@ -69,16 +68,6 @@ $(() => {
         })
     }
 
-
-
-
-    $('.continue').on('click', () => {
-        $('.plant-name').show()
-        $('img').show()
-        $('.continue').hide()
-        $('.next').show()
-        $('.result').hide()
-    })
 
     $('.next').on('click', () => {
         $('.playerChoice').show()

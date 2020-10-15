@@ -24,5 +24,11 @@ $(() => {
         console.log('start button')
     })
     
-
+    $('.continue').on('click', () => {
+        $('.plant-name').show()
+        $('img').show()
+        $('.continue').hide()
+        $('.next').show()
+        $('.result').hide()
+    })
 })
