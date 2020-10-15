@@ -23,16 +23,19 @@ $(() => {
         let $d = $('#d').text()
         let $correct = $('.correctAnswer').text()
         let $result = $('.result')
+    
         $('#a').on('click', () => {
             console.log($a)
             $('.playerChoice').hide()
             $('.continue').show()
             if ($a === $correct) {
                 $result.text('That is correct!')
+                totalDollars()
             }else {
                 $result.text('That is incorrect. The correct answer is ' + $correct + '.')
             }
             $('.result').show()
+
         });
         $('#b').on('click', () => {
             console.log($b)
@@ -40,17 +43,20 @@ $(() => {
             $('.playerChoice').hide()
             if ($b === $correct) {
                 $result.text('That is correct!')
+                totalDollars()
             }else {
                 $result.text('That is incorrect. The correct answer is ' + $correct + '.')
             }
             $('.result').show()
         });
+        
         $('#c').on('click', () => {
             console.log($c)
             $('.continue').show()
             $('.playerChoice').hide()
             if ($c === $correct) {
                 $result.text('That is correct!')
+                totalDollars()
             }else {
                 $result.text('That is incorrect. The correct answer is ' + $correct + '.')
             }
@@ -61,8 +67,8 @@ $(() => {
             $('.continue').show()
             $('.playerChoice').hide()
             if ($d === $correct) {
-                console.log('yay')
                 $result.text('That is correct!')
+                totalDollars()
             }else {
                 $result.text('That is incorrect. The correct answer is ' + $correct + '.')
             }
@@ -78,6 +84,7 @@ const changeLevel = () => {
     //Game of Thrones series by Georgie R. R. Martin
     if ($currentLevel == 'Example') {
         console.log('change1')
+        $('.round-number').text('1')
         $('.level').text('One')
         $('.question').html('In <i>Game of Thrones</i>, Daenerys is known as the queen of these.')
         $('#a').text('dragons')
@@ -90,6 +97,7 @@ const changeLevel = () => {
     //The Simpsons by Matt Groening
     }else if ($currentLevel == 'One') {
         console.log('change 2')
+        $('.round-number').text('2')
         $('.level').text('Two')
         $('.question').text('What kind of necklace does Lisa Simpson wear?')
         $('#a').text('diamonds')
@@ -102,6 +110,7 @@ const changeLevel = () => {
     //Rugrats by Arlene Klasky and Gabor Csupo
     }else if ($currentLevel == 'Two') {
         console.log('change 3')
+        $('.round-number').text('3')
         $('.level').text('Three')
         $('.question').html('In <i>Rugrats</i>, What is Tommy\'s last name?')
         $('#a').text('Potatoes')
@@ -114,6 +123,7 @@ const changeLevel = () => {
     //Shrek! by William Steig
     }else if ($currentLevel == 'Three') {
         console.log('change 4')
+        $('.round-number').text('4')
         $('.level').text('Four')
         $('.question').html('Who is one of Shrek\'s best friends?')
         $('#a').text('Donkey')
@@ -126,6 +136,7 @@ const changeLevel = () => {
     //Harry Potter series  but J. K. Rowling
     }else if ($currentLevel == 'Four') {
         console.log('change 5')
+        $('.round-number').text('5')
         $('.level').text('Five')
         $('.question').html('In <i>Harry Potter</i>, what creature is Ron afraid of?')
         $('#a').text('alligator')
@@ -139,6 +150,7 @@ const changeLevel = () => {
         $('.level-container').hide()
         //run end of game
     }
+
 }
 
     $('.next').on('click', () => {
@@ -156,7 +168,19 @@ const changeLevel = () => {
         $('.plant-name').hide()
         }
 
-
-
+    //Create a way to keep track of how much money you have    
+    let score = 0
+    const totalDollars = () => {
+        let $levelNum = $('.round-number').text()
+        const $walletTotal = $('.wallet-total')
+        console.log(score)
+            if ($levelNum == 0) {
+                score += 5
+                $walletTotal.text(score)
+            }else if($levelNum > 0 && $levelNum < 6) {
+                score += 5
+                $walletTotal.text(score)
+            }
+        }
     
 })
