@@ -34,4 +34,7 @@ $(() => {
         $('.next').show()
         $('.result').hide()
     })
+
+    //When you close the modal screen, let you play the game
+
 })
