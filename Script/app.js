@@ -10,6 +10,9 @@ $(() => {
         $('#home').hide()
         $('.level-container').hide()
         $('.correctAnswer').hide()
+        $('.continue').hide()
+        $('.next').hide()
+        $('.plant-name').hide()
         console.log('main page')
     }
     startGame()
@@ -20,16 +23,6 @@ $(() => {
         $('.modal').show()
         console.log('start button')
     })
-
-    //when you click the play button, show the level container
-    let $div = $('<div>').addClass('level').attr('id', '0')
-    $('#play').on('click', () => {
-        $('.modal').hide()
-        $('.level-container').show()
-        playerAnswer();
-    })
-
-
     
 
 })

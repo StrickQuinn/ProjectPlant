@@ -54,3 +54,8 @@ img {
 #correctAnswer {
     display: none;
 }
+
+img {
+    display: none;
+    height: 400px;
+}
