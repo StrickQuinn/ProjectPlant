@@ -4,7 +4,10 @@ $(() => {
     })
 
      //when you click the play button, show the level container
+    
     $('#play').on('click', () => {
+        const $level = $('.level').attr('id', '0').text()
+    console.log($level)
         $('.modal').hide()
         $('.level-container').show()
         playerAnswer();
