@@ -24,6 +24,7 @@ $(() => {
         console.log('start button')
     })
     
+    //Clicke continue and have plant-name, img and next btn show
     $('.continue').on('click', () => {
         $('.plant-name').show()
         $('img').show()

@@ -6,8 +6,7 @@ $(() => {
      //when you click the play button, show the level container
     
     $('#play').on('click', () => {
-        const $level = $('.level').attr('id', '0').text()
-    console.log($level)
+
         $('.modal').hide()
         $('.level-container').show()
         playerAnswer();
@@ -71,28 +70,58 @@ $(() => {
         })
     }
 
+    //create a way to find the current level
+    //create a way to change the level based on current level
+const changeLevel = () => {
+    const $currentLevel = $('.level').attr('id', '0').text()
+    console.log($currentLevel)
+    if ($currentLevel == 'Example') {
+        console.log('change1')
+        $('.level').attr('id', '1').text('One')
+    $('.question').text('In Game of Thrones, Daenerys is known as the queen of these.')
+    $('#a').text('dragons')
+    $('#b').text('warthogs')
+    $('#c').text('direwolves')
+    $('#d').text('bears')
+    $('.correctAnswer').text('dragons')
+    $('.plant-name').html('Madagascar Dragon Tree <i>Dracaena marginata</i>')
+    $('img').attr('src', 'https://i.imgur.com/Fa87k4G.jpg?1')
+    }else if ($currentLevel == 'One') {
+    console.log('change 2')
+    $('.level').attr('id', '1').text('Two')
+    $('.question').text('What kind of necklace does Lisa Simpson wear?')
+    $('#a').text('diamonds')
+    $('#b').text('jade')
+    $('#c').text('pearls')
+    $('#d').text('turqouise')
+    $('.correctAnswer').text('pearls')
+    $('.plant-name').html('String of Pearls <i>Senecio rowleyanus</i>')
+    $('img').attr('src', 'https://i.imgur.com/XthF9vs.jpg?1')
+    }
+}
+
+
+
+
+
+
 
     $('.next').on('click', () => {
+        changeLevel()
         $('.playerChoice').show()
-        $('.level').attr('id', '1').text('Question 1')
-        $('.question').text('In Game of Thrones, Daenerys is known as the queen of these.')
-        $('#a').text('dragons')
-        $('#b').text('warthogs')
-        $('#c').text('direwolves')
-        $('#d').text('bears')
-        $('.correctAnswer').text('dragons')
         console.log('next btn')
         nextButton()
         $('.next').hide()
     })
-    
     //When you click the next button, change the text of the level-container
     //Game of Thrones series by Georgie R. R. Martin
     const nextButton = () => {
-    playerAnswer()
-    $('img').hide()
-    $('.plant-name').hide()
-    }
+        playerAnswer()
+        $('img').hide()
+        $('.plant-name').hide()
+        }
+
+
 
     
 })
