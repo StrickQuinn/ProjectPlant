@@ -28,9 +28,9 @@ $(() => {
             $('.playerChoice').hide()
             $('.continue').show()
             if ($a === $correct) {
-                $result.text('correct')
+                $result.text('That is correct!')
             }else {
-                $result.text('incorrect')
+                $result.text('That is incorrect. The correct answer is ' + $correct + '.')
             }
             $('.result').show()
         });
@@ -39,9 +39,9 @@ $(() => {
             $('.continue').show()
             $('.playerChoice').hide()
             if ($b === $correct) {
-                $result.text('correct')
+                $result.text('That is correct!')
             }else {
-                $result.text('incorrect')
+                $result.text('That is incorrect. The correct answer is ' + $correct + '.')
             }
             $('.result').show()
         });
@@ -50,9 +50,9 @@ $(() => {
             $('.continue').show()
             $('.playerChoice').hide()
             if ($c === $correct) {
-                $result.text('correct')
+                $result.text('That is correct!')
             }else {
-                $result.text('incorrect')
+                $result.text('That is incorrect. The correct answer is ' + $correct + '.')
             }
             $('.result').show()
         });
@@ -62,9 +62,9 @@ $(() => {
             $('.playerChoice').hide()
             if ($d === $correct) {
                 console.log('yay')
-                $result.text('correct')
+                $result.text('That is correct!')
             }else {
-                $result.text('incorrect')
+                $result.text('That is incorrect. The correct answer is ' + $correct + '.')
             }
             $('.result').show()
         })
