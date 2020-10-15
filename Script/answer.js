@@ -110,7 +110,7 @@ const changeLevel = () => {
         $('#d').text('Peters')
         $('.correctAnswer').text('Pickles')
         $('.plant-name').html('Pickle Cactus<br /><i>Senecio Stapeliiformis</i>')
-        $('img').attr('src', 'https://i.imgur.com/Fa87k4G.jpg?1')
+        $('img').attr('src', 'https://i.imgur.com/7t2irvv.jpg')
     //Shrek! by William Steig
     }else if ($currentLevel == 'Three') {
         console.log('change 4')
@@ -122,7 +122,7 @@ const changeLevel = () => {
         $('#d').text('Pig')
         $('.correctAnswer').text('Donkey')
         $('.plant-name').html('Donkey\'s Tail<br /><i>Sedum morganianum</i>')
-        $('img').attr('src', 'https://i.imgur.com/Fa87k4G.jpg?1')
+        $('img').attr('src', 'https://i.imgur.com/9e5WY70.jpg')
     //Harry Potter series  but J. K. Rowling
     }else if ($currentLevel == 'Four') {
         console.log('change 5')
@@ -135,14 +135,11 @@ const changeLevel = () => {
         $('.correctAnswer').text('spider')
         $('.plant-name').html('Spider Plant<br /><i>Chlorophytum comosum</i>')
         $('img').attr('src', 'https://i.imgur.com/0ejzBgb.jpg')
+    }else {
+        $('.level-container').hide()
+        //run end of game
     }
 }
-
-
-
-
-
-
 
     $('.next').on('click', () => {
         changeLevel()
