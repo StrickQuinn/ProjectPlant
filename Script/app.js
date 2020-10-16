@@ -57,7 +57,12 @@ $(() => {
         }
     }
 
-    const playerAnswer = () => {
+    //set variables for score and wallet total
+    let score = 0;
+    const $walletTotal = $('.wallet-total')
+
+    //checkAnswer
+    const checkAnswer = () => {
         let $result = $('.result');
         currentLevel();
         $correct.hide()
@@ -67,7 +72,9 @@ $(() => {
             if ($a.text() === $correct.text()) {
                 $result.text('That is correct!')
                 console.log('yay')
-                totalDollars()
+                score++
+                console.log('a ' + score)
+                $walletTotal.text(score)
             }else {
                 $result.text('That is incorrect. The correct answer is ' + $correct.text() + '.')
                 console.log('oh no')
@@ -80,7 +87,9 @@ $(() => {
             if ($b.text() === $correct.text()) {
                 $result.text('That is correct!')
                 console.log('yay')
-                totalDollars()
+                score++
+                console.log('b ' + score)
+                $walletTotal.text(score)
             }else {
                 $result.text('That is incorrect. The correct answer is ' + $correct.text() + '.')
                 console.log('oh no')
@@ -92,8 +101,9 @@ $(() => {
             $('.continue').show()
             if ($c.text() === $correct.text()) {
             $result.text('That is correct!')
-                
-                totalDollars()
+                score++
+                console.log('c ' + score)
+                $walletTotal.text(score)
             }else {
                 $result.text('That is incorrect. The correct answer is ' + $correct.text() + '.')
             }
@@ -104,18 +114,32 @@ $(() => {
             $('.continue').show()
             if ($d.text() === $correct.text()) {
             $result.text('That is correct!')
-                
-                totalDollars()
+                score++
+                console.log('d ' + score)
+                $walletTotal.text(score)
             }else {
                 $result.text('That is incorrect. The correct answer is ' + $correct.text() + '.')
             }
             $('.result').show()
         }))
     }
-    playerAnswer()
+    checkAnswer()
 
 
-
+    //Create a way to keep track of how much money you have    
+    // let score = 0
+    // const totalDollars = () => {
+    //     let $levelNum = $('.round-number').text()
+    //     const $walletTotal = $('.wallet-total')
+    //     console.log(score)
+    //         if () {
+    //             score++
+    //             $walletTotal.text(score)
+    //         }else if($levelNum > 0 && $levelNum < 6) {
+    //             score++
+    //             $walletTotal.text(score)
+    //         }
+    //     }
 
 
 

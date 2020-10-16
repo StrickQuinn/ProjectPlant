@@ -92,25 +92,11 @@ const changeLevel = () => {
     //When you click the next button, change the text of the level-container
     //Game of Thrones series by Georgie R. R. Martin
     const nextButton = () => {
-        playerAnswer()
         $('img').hide()
         $('.plant-name').hide()
         }
 
-    //Create a way to keep track of how much money you have    
-    let score = 0
-    const totalDollars = () => {
-        let $levelNum = $('.round-number').text()
-        const $walletTotal = $('.wallet-total')
-        console.log(score)
-            if ($levelNum == 0) {
-                score++
-                $walletTotal.text(score)
-            }else if($levelNum > 0 && $levelNum < 6) {
-                score++
-                $walletTotal.text(score)
-            }
-        }
+
     
 
  
