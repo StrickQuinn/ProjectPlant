@@ -19,7 +19,7 @@ crossorigin="anonymous"></script>
         <!--Create container for game-->
         <div class="container">
             <!--Create Start button-->
-            <button class="modal-buttons" data-toggle="tooltip" title="Click to Play!" id="start">Start</button>
+            <button class="modal-buttons" id="start">Start</button>
             <button class="modal-buttons" id="home">Home</button>
         </div>
         <!--Setup modal to recommended class names for auto-display adjustment... https://getbootstrap.com/docs/4.2/components/modal/-->
@@ -39,115 +39,26 @@ crossorigin="anonymous"></script>
         </div>
 
         <!--added a level-container to siphon values through-->
-        <div class="level-container-0">
+        <div class="level-container">
             <div class="level">Example</div>
             <p class="question">What writing tool usually has an eraser?</p>
-            <button class="playerChoice" id="a0">pen</button>
-            <button class="playerChoice" id="b0">marker</button>
-            <button class="playerChoice" id="c0">paintbrush</button>
-            <button class="playerChoice" id="d0">pencil</button><br />
-            <div class="correctAnswer0">pencil</div><br />
+            <button class="playerChoice" id="a">pen</button>
+            <button class="playerChoice" id="b">marker</button>
+            <button class="playerChoice" id="c">paintbrush</button>
+            <button class="playerChoice" id="d">pencil</button><br />
             <div class="result"></div>
-            <div class="plant-name">Pencil Cactus<br /><i>Euphorbia tirucalli</i></div>
-            <img class="plant-image" src="https://i.imgur.com/qgkZx1s.jpg?1">
+            <div class="plant-name">Pencil Cactus<br />
+            <i>Euphorbia tirucalli</i></div>
+            <img class="pencil-cactus" src="https://i.imgur.com/qgkZx1s.jpg?1">
+            <div class="correctAnswer">pencil</div><br />
             <button class="restart">Restart Game</button>
             <button class="continue">Continue</button>
-            <button type="reset" class="next">Next</button>
-        </div>
-
-        
-        <div class="level-container-1">
-            <div class="level">1</div>
-            <p class="question">'In <i>Game of Thrones</i>, Daenerys is known as the queen of these.'</p>
-            <button class="playerChoice" id="a1">dragons</button>
-            <button class="playerChoice" id="b1">warthogs</button>
-            <button class="playerChoice" id="c1">direwolves</button>
-            <button class="playerChoice" id="d1">bears</button><br />
-            <div class="result"></div>
-            <div class="correctAnswer1">dragons</div><br />
-            <div class="plant-name">Madagascar Dragon Tree<br /><i>Dracaena marginata</i></div>
-            <img class="plant-image" src="https://i.imgur.com/Qq49gve.jpg">
-            <button class="restart">Restart Game</button>
-            <button class="continue">Continue</button>
-            <button type="reset" class="next">Next</button>
-        </div>
-
-
-        <div class="level-container-2">
-            <div class="level">2</div>
-            <p class="question">'What kind of necklace does Lisa Simpson wear?'</p>
-            <button class="playerChoice" id="a2">diamonds</button>
-            <button class="playerChoice" id="b2">jade</button>
-            <button class="playerChoice" id="c2">pearls</button>
-            <button class="playerChoice" id="d2">turqouise</button>
-            <div class="correctAnswer2">pearls</div><br />
-            <div class="result"></div>
-            <div class="plant-name">String of Pearls<br /><i>Senecio rowleyanus</i></div>
-            <img class="plant-image" src="https://i.imgur.com/XthF9vs.jpg?1">
-            <button class="restart">Restart Game</button>
-            <button class="continue">Continue</button>
-            <button type="reset" class="next">Next</button>
-        </div>
-
-
-        <div class="level-container-3">
-            <div class="level">3</div>
-            <p class="question">In <i>Rugrats</i>, What is Tommy's last name?</p>
-            <button class="playerChoice" id="a3">Potatoes</button>
-            <button class="playerChoice" id="b3">Mayonnaise</button>
-            <button class="playerChoice" id="c3">Pickles</button>
-            <button class="playerChoice" id="d3">Peters</button>
-            <div class="correctAnswer3">Pickles</div><br />
-            <div class="result"></div>
-            <div class="plant-name">Pickle Cactus<br /><i>Senecio Stapeliiformis</i></div>
-            <img class="plant-image" src="https://i.imgur.com/7t2irvv.jpg">
-            <button class="restart">Restart Game</button>
-            <button class="continue">Continue</button>
-            <button type="reset" class="next">Next</button>
-        </div>
-
-
-        <div class="level-container-4">
-            <div class="level">4</div>
-            <p class="question">Who is one of Shrek's best friends?</p>
-            <button class="playerChoice" id="a4">Donkey</button>
-            <button class="playerChoice" id="b4">Cow</button>
-            <button class="playerChoice" id="c4">Chicken</button>
-            <button class="playerChoice" id="d4">Pig</button>
-            <div class="correctAnswer4">Donkey</div><br />
-            <div class="result"></div>
-            <div class="plant-name">Donkey's Tail<br /><i>Sedum morganianum</i></div>
-            <img class="plant-image" src="https://i.imgur.com/9e5WY70.jpg">
-            <button class="restart">Restart Game</button>
-            <button class="continue">Continue</button>
-            <button type="reset" class="next">Next</button>
-        </div>
-
-
-        <div class="level-container-5">
-            <div class="level">5</div>
-            <p class="question">In <i>Harry Potter</i>, what creature is Ron afraid of?</p>
-            <button class="playerChoice" id="a5">alligator</button>
-            <button class="playerChoice" id="b5">spider</button>
-            <button class="playerChoice" id="c5">snake</button>
-            <button class="playerChoice" id="d5">horse</button>
-            <div class="correctAnswer">spider</div><br />
-            <div class="result"></div>
-            <div class="plant-name">pider Plant<br /><i>Chlorophytum comosum</i></div>
-            <img class="plant-image" src="https://i.imgur.com/0ejzBgb.jpg">
-            <button class="restart">Restart Game</button>
-            <button class="continue">Continue</button>
-            <button type="reset" class="next">Next</button>
+            <button class="next">Next</button>
         </div>
 
         <!--make a container to show your what you've earned & tell you what round you are on-->
         <div class="wallet-container">
             <div class="wallet">Your Wallet($):</div>
-            <div class="wallet-total0"></div>
-            <div class="wallet-total1"></div>
-            <div class="wallet-total2"></div>
-            <div class="wallet-total3"></div>
-            <div class="wallet-total4"></div>
             <div class="wallet-total"></div>
             <div class="round-name">Level</div>
             <div class="round-number">0</div>
