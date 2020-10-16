@@ -9,6 +9,8 @@ body {
     background-image: url('https://i.imgur.com/jgfcNgU.jpg');
     background-size: cover;
 }
+
+
 .container {
     justify-content: center;
     text-align: center;
@@ -57,4 +59,19 @@ img {
 img {
     display: none;
     height: 400px;
+}
+
+button {
+    border-radius: 20px;
+}
+
+
+@media (max-width: 400px) {
+    body {
+        background-size: 100%;    
+    }
+}
+
+.modal-content {
+    background: rgba(111, 165, 105, 0.6)
 }

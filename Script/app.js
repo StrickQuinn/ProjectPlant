@@ -15,7 +15,10 @@ $(() => {
         $('.continue').hide()
         $('.next').hide()
         $('.plant-name').hide()
+        $('#restart').hide()
         console.log('main page')
+        $('game-result').hide()
+        
     }
     startGame()
 
@@ -26,7 +29,7 @@ $(() => {
         console.log('start button')
     })
     
-    //Clicke continue and have plant-name, img and next btn show
+    //Click continue and have plant-name, img and next btn show
     $('.continue').on('click', () => {
         $('.plant-name').show()
         $('img').show()
@@ -35,6 +38,31 @@ $(() => {
         $('.result').hide()
     })
 
-    //When you close the modal screen, let you play the game
+    $('.restart').on('click', () => {
+        startGame()
+        $('.wallet-container').hide()
+        $('.level-container').hide()
+        $('playerChoice').hide()
+        $('#start').show()
+        $('.plant-name').hide()
+        $('.plant-img').hide()
+        $('.correctAnswer').hide()
+        $('.wallet-total').html('')
+        score = 0
+        $('.round-number').text('0')
+        $('.level').text('Example')
+        $('.question').html('What writing tool usually has an eraser?')
+        $('#a').text('pen')
+        $('#b').text('marker')
+        $('#c').text('paintbrush')
+        $('#d').text('pencil')
+        $('.correctAnswer').text('pencil')
+        $('.plant-name').html('Pencil Cactus<br /><i>Euphorbia tirucalli</i>')
+        $('img').attr('src', 'https://i.imgur.com/qgkZx1s.jpg?1')
+        totalDollars = 0
 
+
+    })
+
+    
 })

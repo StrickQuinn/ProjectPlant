@@ -114,43 +114,28 @@ const changeLevel = () => {
         $('.level').text('Three')
         $('.question').html('In <i>Rugrats</i>, What is Tommy\'s last name?')
         $('#a').text('Potatoes')
-        $('#b').text('Mayonnaise')
-        $('#c').text('Pickles')
+        $('#b').text('Pickles')
+        $('#c').text('Mayonnaise')
         $('#d').text('Peters')
         $('.correctAnswer').text('Pickles')
         $('.plant-name').html('Pickle Cactus<br /><i>Senecio Stapeliiformis</i>')
         $('img').attr('src', 'https://i.imgur.com/7t2irvv.jpg')
-    //Shrek! by William Steig
+    
     }else if ($currentLevel == 'Three') {
-        console.log('change 4')
-        $('.round-number').text('4')
-        $('.level').text('Four')
-        $('.question').html('Who is one of Shrek\'s best friends?')
-        $('#a').text('Donkey')
-        $('#b').text('Cow')
-        $('#c').text('Chicken')
-        $('#d').text('Pig')
-        $('.correctAnswer').text('Donkey')
-        $('.plant-name').html('Donkey\'s Tail<br /><i>Sedum morganianum</i>')
-        $('img').attr('src', 'https://i.imgur.com/9e5WY70.jpg')
-    //Harry Potter series  but J. K. Rowling
-    }else if ($currentLevel == 'Four') {
-        console.log('change 5')
-        $('.round-number').text('5')
-        $('.level').text('Five')
-        $('.question').html('In <i>Harry Potter</i>, what creature is Ron afraid of?')
-        $('#a').text('alligator')
-        $('#b').text('spider')
-        $('#c').text('snake')
-        $('#d').text('horse')
-        $('.correctAnswer').text('spider')
-        $('.plant-name').html('Spider Plant<br /><i>Chlorophytum comosum</i>')
-        $('img').attr('src', 'https://i.imgur.com/0ejzBgb.jpg')
-    }else {
+        $('.end-container').show()
         $('.level-container').hide()
+        winGame()
         //run end of game
     }
 
+}
+
+const winGame = () => {
+    if ($('.wallet-total').html('') >=15) {
+        $('.game-result').html('Woohoo! I can trust you with my plants!')
+    }else {
+        $('.game-result').html('Looks like you still have some learning to do')
+    }
 }
 
     $('.next').on('click', () => {
@@ -168,19 +153,18 @@ const changeLevel = () => {
         $('.plant-name').hide()
         }
 
+
+     ///***Here is where there is a problem with counting   
     //Create a way to keep track of how much money you have    
     let score = 0
     const totalDollars = () => {
-        let $levelNum = $('.round-number').text()
+        let $levelNum = $('.round-number').html()
         const $walletTotal = $('.wallet-total')
         console.log(score)
-            if ($levelNum == 0) {
-                score += 5
-                $walletTotal.text(score)
-            }else if($levelNum > 0 && $levelNum < 6) {
-                score += 5
-                $walletTotal.text(score)
-            }
+        if ($levelNum >= 0 && $levelNum <= 3) {
+            score += 5
+            $walletTotal.html(score)
         }
+    }
     
 })
