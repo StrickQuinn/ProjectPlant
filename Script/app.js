@@ -27,6 +27,7 @@ $(() => {
         $('#start').hide()
         $('.modal').show()
         console.log('start button')
+        $('.auntB').hide()
     })
     
     //Click continue and have plant-name, img and next btn show

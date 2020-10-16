@@ -66,13 +66,12 @@ button {
     border-radius: 20px;
 }
 
+.modal-content {
+    background: rgba(111, 165, 105, 0.6)
+}
 
 @media (max-width: 400px) {
     body {
         background-size: 100%;    
     }
-}
-
-.modal-content {
-    background: rgba(111, 165, 105, 0.6)
 }
