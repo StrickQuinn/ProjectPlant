@@ -161,13 +161,11 @@ const winGame = () => {
     //Create a way to keep track of how much money you have    
     let score = 0
     const totalDollars = () => {
-        let $levelNum = $('.round-number').html()
         const $walletTotal = $('.wallet-total')
         console.log(score)
-        if ($levelNum >= 0 && $levelNum <= 3) {
             score += 5
             $walletTotal.html(score)
-        }
+        // }
     }
     
 })

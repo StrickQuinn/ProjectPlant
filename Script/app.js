@@ -18,7 +18,6 @@ $(() => {
         $('#restart').hide()
         console.log('main page')
         $('game-result').hide()
-        
     }
     startGame()
 
