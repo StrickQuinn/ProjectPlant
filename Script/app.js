@@ -33,6 +33,7 @@ $(() => {
         $('.continue').hide()
         $('.next').show()
         $('.result').hide()
+        $('.playerChoice').hide()
     })
 
     //When you close the modal screen, let you play the game

@@ -89,35 +89,69 @@ $(() => {
         )
     ]
 
+class Player {
+    constructor(answer){
+        this.answer = ''
+        }
+}
+const player = new Player()
+
     //Create a way to play the game
     const playGame = () => {
         playerSelection();
-        
     }
+
+    //set some variables to grab text
+    let $a = $('#a').text()
+    let $b = $('#b').text()
+    let $c = $('#c').text()
+    let $d = $('#d').text()
+    // let playerAnswer = ''
+    let $correct = $('.correctAnswer').text()
 
     //determine player's answer
     const playerSelection = () => {
-        let $a = $('#a').text()
-        let $b = $('#b').text()
-        let $c = $('#c').text()
-        let $d = $('#d').text()
-
+        
         if ($('#a').on('click', () => {
-            playerAnswer = $a
-            console.log(playerAnswer)
+            player.answer = $a
+            checkAnswer(player.answer)
+            // console.log(player.answer)
+            $('.continue').show()
+            $('.playerChoice').hide()
         }));
         if ($('#b').on('click', () => {
-            playerAnswer = $b
-            console.log(playerAnswer)
+            player.answer = $b
+            checkAnswer(player.answer)
+            // console.log(player.answer)
+            $('.continue').show()
+            $('.playerChoice').hide()
         }));
         if ($('#c').on('click', () => {
-            playerAnswer = $a
-            console.log(playerAnswer)
+            player.answer = $c
+            checkAnswer(player.answer)
+            // console.log(player.answer)
+            $('.continue').show()
+            $('.playerChoice').hide()
         }));
         if ($('#d').on('click', () => {
-            playerAnswer = $d
-            console.log(playerAnswer)
+            player.answer = $d
+            checkAnswer(player.answer)
+            // console.log(player.answer)
+            $('.continue').show()
+            $('.playerChoice').hide()
         }));
     }
     
+    //create a way to to check player's answer to correct answer
+    const checkAnswer = () => {
+        console.log(player.answer)
+        console.log($correct)
+        if (player.answer === $correct) {
+            $('.result').text('Correct!')
+            console.log(true)
+        }else {
+            $('.result').text('Sorry. That is incorrect.')
+            console.log(false)
+        }
+    }
 })
