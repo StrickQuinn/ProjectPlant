@@ -26,14 +26,13 @@ $(() => {
         console.log('start button')
     })
     
-    //Clicke continue and have plant-name, img and next btn show
+    //Click continue and have plant-name, img and next btn show
     $('.continue').on('click', () => {
         $('.plant-name').show()
         $('img').show()
         $('.continue').hide()
         $('.next').show()
         $('.result').hide()
-        $('.playerChoice').hide()
     })
 
     //When you close the modal screen, let you play the game

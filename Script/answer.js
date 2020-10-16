@@ -158,4 +158,23 @@ const player = new Player()
             //console.log(false)
         }
     }
+
+
+    //next button will change the level
+    $('.next').on('click', () => {
+        nextLevel = totalLevels[0]
+        $('.level').text(nextLevel.number),
+        $('.question').html(nextLevel.question),
+        $('#a').text(nextLevel.answerA)
+        $('#b').text(nextLevel.answerB)
+        $('#c').text(nextLevel.answerC)
+        $('#d').text(nextLevel.answerD)
+        $('.correctAnswer').text(nextLevel.correctAnswer)
+        $('.result').text(nextLevel.result)
+        $('.plant-name').html(nextLevel.plantName)
+        $('.plant-image').attr('src', nextLevel.plantImage)
+        $('.playerChoice').show()
+        $('.plant-name').hide()
+        $('img').hide()
+    })
 })
