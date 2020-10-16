@@ -25,6 +25,68 @@ $(() => {
             this.plantImage = plantImage
         }
     }
-    const levels = []
+    const totalLevels = [
+        new Level(
+            1,
+            'In <i>Game of Thrones</i>, Daenerys is known as the queen of these.',
+            'dragons',
+            'warthogs',
+            'direwolves',
+            'bears',
+            'dragons',
+            '',
+            'Madagascar Dragon Tree <br /><i>Dracaena marginata</i>',
+            'https://i.imgur.com/Qq49gve.jpg'
+        ),
+        new Level(
+            2,
+            'What kind of necklace does Lisa Simpson wear?',
+            'diamonds',
+            'jade',
+            'pearls',
+            'turqouise',
+            'pearls',
+            '',
+            'String of Pearls<br /><i>Senecio rowleyanus</i>',
+            'https://i.imgur.com/XthF9vs.jpg?1'
+        ),
+        new Level(
+            3,
+            'In <i>Rugrats</i>, What is Tommy\'s last name?',
+            'Potatoes',
+            'Mayonnaise',
+            'Pickles',
+            'Peters',
+            'Pickles',
+            '',
+            'Pickle Cactus<br /><i>Senecio Stapeliiformis</i>',
+            'https://i.imgur.com/7t2irvv.jpg'
+        ),
+        new Level(
+            4,
+            'Who is one of Shrek\'s best friends?',
+            'Donkey',
+            'Cow',
+            'Chicken',
+            'Pig',
+            'Donkey',
+            '',
+            'Donkey\'s Tail<br /><i>Sedum morganianum</i>',
+            'https://i.imgur.com/9e5WY70.jpg'
+        )
+        new Level(
+            5,
+            'In <i>Harry Potter</i>, what creature is Ron afraid of?',
+            'alligator',
+            'spider',
+            'snake',
+            'horse',
+            'spider',
+            '',
+            'Spider Plant<br /><i>Chlorophytum comosum</i>',
+            'https://i.imgur.com/0ejzBgb.jpg'
+        )
+    ]
+
     
 })
