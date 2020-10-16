@@ -6,7 +6,7 @@ $(() => {
     })
 
     //To start the game, hide the home button, the level container
-    const homePage = () => {
+    const startGame = () => {
         $('.end-container').hide()
         $('.wallet-container').hide()
         $('#home').hide()
@@ -17,7 +17,7 @@ $(() => {
         $('.plant-name').hide()
         console.log('main page')
     }
-    homePage()
+    startGame()
 
 //when you click the start button, hide it and show modal
     $('#start').on('click', () => {
@@ -26,7 +26,7 @@ $(() => {
         console.log('start button')
     })
     
-    //Click continue and have plant-name, img and next btn show
+    //Clicke continue and have plant-name, img and next btn show
     $('.continue').on('click', () => {
         $('.plant-name').show()
         $('img').show()
