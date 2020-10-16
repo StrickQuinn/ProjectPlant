@@ -91,7 +91,8 @@ $(() => {
 
 class Player {
     constructor(answer){
-        this.answer = ''
+        this.answer = '',
+        this.score = ''
         }
 }
 const player = new Player()
@@ -148,10 +149,13 @@ const player = new Player()
         console.log($correct)
         if (player.answer === $correct) {
             $('.result').text('Correct!')
-            console.log(true)
+            player.score += 1
+            $('.wallet-total').text(player.score)
+            console.log(player.score)
+            //console.log(true)
         }else {
             $('.result').text('Sorry. That is incorrect.')
-            console.log(false)
+            //console.log(false)
         }
     }
 })
