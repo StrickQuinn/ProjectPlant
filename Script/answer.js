@@ -5,12 +5,6 @@ $(() => {
 
      //when you click the play button, show the level container
     
-    $('#play').on('click', () => {
-        $('.wallet-container').show()
-        $('.modal').hide()
-        $('.level-container').show()
-        playerAnswer();
-    })
 
     //set an array for the correct Answers
     // const totalCorrectAnswer = ['pencil', 'dragons', 'pearls', 'Pickles', 'Donkey', 'spider']

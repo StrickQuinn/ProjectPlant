@@ -25,6 +25,28 @@ $(() => {
         console.log('start button')
     })
     
+    //make levels easier to grab
+    const $level0 = $('.level-container-0')
+    const $level1 = $('.level-container-1')
+    const $level2 = $('.level-container-2')
+    const $level3 = $('.level-container-3')
+    const $level4 = $('.level-container-4')
+    const $level5 = $('.level-container-5')
+
+    const totalLevels = [$level0, $level1, $level2, $level3, $level4, $level5]
+
+    //when you click on X in the modal, modal hids, wallet shows, example shows
+    $('#play').on('click', () => {
+        totalLevels[0].show()
+        $('.wallet-container').show()
+        $('.modal').hide()
+        $('.level-container').show()
+    })
+
+
+
+
+
     //Clicke continue and have plant-name, img and next btn show
     $('.continue').on('click', () => {
         $('.plant-name').show()
