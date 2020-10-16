@@ -130,6 +130,8 @@ const changeLevel = () => {
 
 }
 
+
+//In order to with the game, the total amount in the wallet must be >= 15
 const winGame = () => {
     if ($('.wallet-total').html('') >=15) {
         $('.game-result').html('Woohoo! I can trust you with my plants!')
@@ -138,6 +140,8 @@ const winGame = () => {
     }
 }
 
+
+    //When you click the next button, change the text of the level-container
     $('.next').on('click', () => {
         changeLevel()
         $('.playerChoice').show()
@@ -145,8 +149,7 @@ const winGame = () => {
         nextButton()
         $('.next').hide()
     })
-    //When you click the next button, change the text of the level-container
-    //Game of Thrones series by Georgie R. R. Martin
+
     const nextButton = () => {
         playerAnswer()
         $('img').hide()
@@ -154,7 +157,7 @@ const winGame = () => {
         }
 
 
-     ///***Here is where there is a problem with counting   
+     ///***Here + buttons are where there are problems with counting   
     //Create a way to keep track of how much money you have    
     let score = 0
     const totalDollars = () => {

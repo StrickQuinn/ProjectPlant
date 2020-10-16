@@ -38,6 +38,7 @@ $(() => {
         $('.result').hide()
     })
 
+    //When you hit the restart button, hide all unnecessary containers, and set level valu back to example's
     $('.restart').on('click', () => {
         startGame()
         $('.wallet-container').hide()
