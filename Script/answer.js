@@ -8,6 +8,7 @@ $(() => {
         $('.wallet-container').show()
         $('.modal').hide()
         $('.level-container').show()
+        playGame()
     })
 
     //have a way to create the different levels
@@ -73,7 +74,7 @@ $(() => {
             '',
             'Donkey\'s Tail<br /><i>Sedum morganianum</i>',
             'https://i.imgur.com/9e5WY70.jpg'
-        )
+        ),
         new Level(
             5,
             'In <i>Harry Potter</i>, what creature is Ron afraid of?',
@@ -88,5 +89,35 @@ $(() => {
         )
     ]
 
+    //Create a way to play the game
+    const playGame = () => {
+        playerSelection();
+        
+    }
+
+    //determine player's answer
+    const playerSelection = () => {
+        let $a = $('#a').text()
+        let $b = $('#b').text()
+        let $c = $('#c').text()
+        let $d = $('#d').text()
+
+        if ($('#a').on('click', () => {
+            playerAnswer = $a
+            console.log(playerAnswer)
+        }));
+        if ($('#b').on('click', () => {
+            playerAnswer = $b
+            console.log(playerAnswer)
+        }));
+        if ($('#c').on('click', () => {
+            playerAnswer = $a
+            console.log(playerAnswer)
+        }));
+        if ($('#d').on('click', () => {
+            playerAnswer = $d
+            console.log(playerAnswer)
+        }));
+    }
     
 })
