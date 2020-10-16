@@ -31,12 +31,11 @@ body {
     margin: 25% 0;
 }
 
-.level-container-0,.level-container-1, .level-container-2, .level-container-3, .level-container-4, .level-container-5, .wallet-container, .end-container {
+.level-container, .wallet-container, .end-container {
     background: rgba(211, 211, 211, .6);
     text-align: center;
     border: 2px solid black;
     padding: 10px;
-    display: none;
 }
 
 img {
@@ -52,7 +51,7 @@ img {
 }
 
 #correctAnswer {
-    opacity: 1;
+    display: none;
 }
 
 img {
