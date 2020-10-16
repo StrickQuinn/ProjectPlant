@@ -24,7 +24,7 @@ $(() => {
         let $correct = $('.correctAnswer').text()
         let $result = $('.result')
     
-        $('#a').on('click', () => {
+        if ($('#a').on('click', () => {
             console.log($a)
             $('.playerChoice').hide()
             $('.continue').show()
@@ -36,8 +36,8 @@ $(() => {
             }
             $('.result').show()
 
-        });
-        $('#b').on('click', () => {
+        }));
+        if ($('#b').on('click', () => {
             console.log($b)
             $('.continue').show()
             $('.playerChoice').hide()
@@ -48,9 +48,9 @@ $(() => {
                 $result.text('That is incorrect. The correct answer is ' + $correct + '.')
             }
             $('.result').show()
-        });
+        }));
         
-        $('#c').on('click', () => {
+        if ($('#c').on('click', () => {
             console.log($c)
             $('.continue').show()
             $('.playerChoice').hide()
@@ -61,8 +61,8 @@ $(() => {
                 $result.text('That is incorrect. The correct answer is ' + $correct + '.')
             }
             $('.result').show()
-        });
-        $('#d').on('click', () => {
+        }));
+        if ($('#d').on('click', () => {
             console.log($d)
             $('.continue').show()
             $('.playerChoice').hide()
@@ -73,7 +73,7 @@ $(() => {
                 $result.text('That is incorrect. The correct answer is ' + $correct + '.')
             }
             $('.result').show()
-        })
+        }));
     }
 
     //create a way to find the current level
@@ -165,7 +165,6 @@ const winGame = () => {
         console.log(score)
             score += 5
             $walletTotal.html(score)
-        // }
     }
     
 })
