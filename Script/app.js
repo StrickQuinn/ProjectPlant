@@ -10,7 +10,6 @@ $(() => {
         $('.end-container').hide()
         $('.wallet-container').hide()
         $('#home').hide()
-        $('.level-container').hide()
         $('.correctAnswer').hide()
         $('.continue').hide()
         $('.next').hide()
