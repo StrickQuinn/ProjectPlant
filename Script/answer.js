@@ -3,178 +3,184 @@ $(() => {
         e.preventDefault()
     })
 
-    //when you click the X button, hide modal and show wallet container and level container
+     //when you click the play button, show the level container
+    
     $('#play').on('click', () => {
         $('.wallet-container').show()
         $('.modal').hide()
         $('.level-container').show()
-        playGame()
+        playerAnswer();
     })
 
-    //have a way to create the different levels
-    class Level {
-        constructor(number, question, answerA, answerB, answerC,  answerD, correctAnswer, result, plantName, plantImage){
-            this.number = number,
-            this.question = question,
-            this.answerA = answerA,
-            this.answerB = answerB,
-            this.answerC = answerC,
-            this.answerD = answerD,
-            this.correctAnswer = correctAnswer,
-            this.result = result,
-            this.plantName = plantName,
-            this.plantImage = plantImage
-        }
-    }
-    const totalLevels = [
-        new Level(
-            1,
-            'In <i>Game of Thrones</i>, Daenerys is known as the queen of these.',
-            'dragons',
-            'warthogs',
-            'direwolves',
-            'bears',
-            'dragons',
-            '',
-            'Madagascar Dragon Tree <br /><i>Dracaena marginata</i>',
-            'https://i.imgur.com/Qq49gve.jpg'
-        ),
-        new Level(
-            2,
-            'What kind of necklace does Lisa Simpson wear?',
-            'diamonds',
-            'jade',
-            'pearls',
-            'turqouise',
-            'pearls',
-            '',
-            'String of Pearls<br /><i>Senecio rowleyanus</i>',
-            'https://i.imgur.com/XthF9vs.jpg?1'
-        ),
-        new Level(
-            3,
-            'In <i>Rugrats</i>, What is Tommy\'s last name?',
-            'Potatoes',
-            'Mayonnaise',
-            'Pickles',
-            'Peters',
-            'Pickles',
-            '',
-            'Pickle Cactus<br /><i>Senecio Stapeliiformis</i>',
-            'https://i.imgur.com/7t2irvv.jpg'
-        ),
-        new Level(
-            4,
-            'Who is one of Shrek\'s best friends?',
-            'Donkey',
-            'Cow',
-            'Chicken',
-            'Pig',
-            'Donkey',
-            '',
-            'Donkey\'s Tail<br /><i>Sedum morganianum</i>',
-            'https://i.imgur.com/9e5WY70.jpg'
-        ),
-        new Level(
-            5,
-            'In <i>Harry Potter</i>, what creature is Ron afraid of?',
-            'alligator',
-            'spider',
-            'snake',
-            'horse',
-            'spider',
-            '',
-            'Spider Plant<br /><i>Chlorophytum comosum</i>',
-            'https://i.imgur.com/0ejzBgb.jpg'
-        )
-    ]
-
-class Player {
-    constructor(answer){
-        this.answer = '',
-        this.score = ''
-        }
-}
-const player = new Player()
-
-    //Create a way to play the game
-    const playGame = () => {
-        playerSelection();
-    }
-
-    //set some variables to grab text
-    let $a = $('#a').text()
-    let $b = $('#b').text()
-    let $c = $('#c').text()
-    let $d = $('#d').text()
-    // let playerAnswer = ''
-    let $correct = $('.correctAnswer').text()
-
-    //determine player's answer
-    const playerSelection = () => {
-        
-        if ($('#a').on('click', () => {
-            player.answer = $a
-            checkAnswer(player.answer)
-            // console.log(player.answer)
-            $('.continue').show()
-            $('.playerChoice').hide()
-        }));
-        if ($('#b').on('click', () => {
-            player.answer = $b
-            checkAnswer(player.answer)
-            // console.log(player.answer)
-            $('.continue').show()
-            $('.playerChoice').hide()
-        }));
-        if ($('#c').on('click', () => {
-            player.answer = $c
-            checkAnswer(player.answer)
-            // console.log(player.answer)
-            $('.continue').show()
-            $('.playerChoice').hide()
-        }));
-        if ($('#d').on('click', () => {
-            player.answer = $d
-            checkAnswer(player.answer)
-            // console.log(player.answer)
-            $('.continue').show()
-            $('.playerChoice').hide()
-        }));
-    }
+    //when you click the a button, if the text equals correctAnswer text, you are correct;
+    //hide choice buttons
+    //create a playGame fxn to wrap whether or not the answer is correct
+    //when the button is clicked, remove all buttons
+    const playerAnswer = () => {
+        let $a = $('#a').text()
+        let $b = $('#b').text()
+        let $c = $('#c').text()
+        let $d = $('#d').text()
+        let $correct = $('.correctAnswer').text()
+        let $result = $('.result')
     
-    //create a way to to check player's answer to correct answer
-    const checkAnswer = () => {
-        console.log(player.answer)
-        console.log($correct)
-        if (player.answer === $correct) {
-            $('.result').text('Correct!')
-            player.score += 1
-            $('.wallet-total').text(player.score)
-            console.log(player.score)
-            //console.log(true)
-        }else {
-            $('.result').text('Sorry. That is incorrect.')
-            //console.log(false)
-        }
+        $('#a').on('click', () => {
+            console.log($a)
+            $('.playerChoice').hide()
+            $('.continue').show()
+            if ($a === $correct) {
+                $result.text('That is correct!')
+                totalDollars()
+            }else {
+                $result.text('That is incorrect. The correct answer is ' + $correct + '.')
+            }
+            $('.result').show()
+
+        });
+        $('#b').on('click', () => {
+            console.log($b)
+            $('.continue').show()
+            $('.playerChoice').hide()
+            if ($b === $correct) {
+                $result.text('That is correct!')
+                totalDollars()
+            }else {
+                $result.text('That is incorrect. The correct answer is ' + $correct + '.')
+            }
+            $('.result').show()
+        });
+        
+        $('#c').on('click', () => {
+            console.log($c)
+            $('.continue').show()
+            $('.playerChoice').hide()
+            if ($c === $correct) {
+                $result.text('That is correct!')
+                totalDollars()
+            }else {
+                $result.text('That is incorrect. The correct answer is ' + $correct + '.')
+            }
+            $('.result').show()
+        });
+        $('#d').on('click', () => {
+            console.log($d)
+            $('.continue').show()
+            $('.playerChoice').hide()
+            if ($d === $correct) {
+                $result.text('That is correct!')
+                totalDollars()
+            }else {
+                $result.text('That is incorrect. The correct answer is ' + $correct + '.')
+            }
+            $('.result').show()
+        })
     }
 
+    //create a way to find the current level
+    //create a way to change the level based on current level
+const changeLevel = () => {
+    const $currentLevel = $('.level').attr('id', '0').text()
+    console.log($currentLevel)
+    //Game of Thrones series by Georgie R. R. Martin
+    if ($currentLevel == 'Example') {
+        console.log('change1')
+        $('.round-number').text('1')
+        $('.level').text('One')
+        $('.question').html('In <i>Game of Thrones</i>, Daenerys is known as the queen of these.')
+        $('#a').text('dragons')
+        $('#b').text('warthogs')
+        $('#c').text('direwolves')
+        $('#d').text('bears')
+        $('.correctAnswer').text('dragons')
+        $('.plant-name').html('Madagascar Dragon Tree <br /><i>Dracaena marginata</i>')
+        $('img').attr('src', 'https://i.imgur.com/Qq49gve.jpg')
+    //The Simpsons by Matt Groening
+    }else if ($currentLevel == 'One') {
+        console.log('change 2')
+        $('.round-number').text('2')
+        $('.level').text('Two')
+        $('.question').text('What kind of necklace does Lisa Simpson wear?')
+        $('#a').text('diamonds')
+        $('#b').text('jade')
+        $('#c').text('pearls')
+        $('#d').text('turqouise')
+        $('.correctAnswer').text('pearls')
+        $('.plant-name').html('String of Pearls<br /><i>Senecio rowleyanus</i>')
+        $('img').attr('src', 'https://i.imgur.com/XthF9vs.jpg?1')
+    //Rugrats by Arlene Klasky and Gabor Csupo
+    }else if ($currentLevel == 'Two') {
+        console.log('change 3')
+        $('.round-number').text('3')
+        $('.level').text('Three')
+        $('.question').html('In <i>Rugrats</i>, What is Tommy\'s last name?')
+        $('#a').text('Potatoes')
+        $('#b').text('Mayonnaise')
+        $('#c').text('Pickles')
+        $('#d').text('Peters')
+        $('.correctAnswer').text('Pickles')
+        $('.plant-name').html('Pickle Cactus<br /><i>Senecio Stapeliiformis</i>')
+        $('img').attr('src', 'https://i.imgur.com/7t2irvv.jpg')
+    //Shrek! by William Steig
+    }else if ($currentLevel == 'Three') {
+        console.log('change 4')
+        $('.round-number').text('4')
+        $('.level').text('Four')
+        $('.question').html('Who is one of Shrek\'s best friends?')
+        $('#a').text('Donkey')
+        $('#b').text('Cow')
+        $('#c').text('Chicken')
+        $('#d').text('Pig')
+        $('.correctAnswer').text('Donkey')
+        $('.plant-name').html('Donkey\'s Tail<br /><i>Sedum morganianum</i>')
+        $('img').attr('src', 'https://i.imgur.com/9e5WY70.jpg')
+    //Harry Potter series  but J. K. Rowling
+    }else if ($currentLevel == 'Four') {
+        console.log('change 5')
+        $('.round-number').text('5')
+        $('.level').text('Five')
+        $('.question').html('In <i>Harry Potter</i>, what creature is Ron afraid of?')
+        $('#a').text('alligator')
+        $('#b').text('spider')
+        $('#c').text('snake')
+        $('#d').text('horse')
+        $('.correctAnswer').text('spider')
+        $('.plant-name').html('Spider Plant<br /><i>Chlorophytum comosum</i>')
+        $('img').attr('src', 'https://i.imgur.com/0ejzBgb.jpg')
+    }else {
+        $('.level-container').hide()
+        //run end of game
+    }
 
-    //next button will change the level
+}
+
     $('.next').on('click', () => {
-        nextLevel = totalLevels[0]
-        $('.level').text(nextLevel.number),
-        $('.question').html(nextLevel.question),
-        $('#a').text(nextLevel.answerA)
-        $('#b').text(nextLevel.answerB)
-        $('#c').text(nextLevel.answerC)
-        $('#d').text(nextLevel.answerD)
-        $('.correctAnswer').text(nextLevel.correctAnswer)
-        $('.result').text(nextLevel.result)
-        $('.plant-name').html(nextLevel.plantName)
-        $('.plant-image').attr('src', nextLevel.plantImage)
+        changeLevel()
         $('.playerChoice').show()
-        $('.plant-name').hide()
-        $('img').hide()
+        console.log('next btn')
+        nextButton()
+        $('.next').hide()
     })
+    //When you click the next button, change the text of the level-container
+    //Game of Thrones series by Georgie R. R. Martin
+    const nextButton = () => {
+        playerAnswer()
+        $('img').hide()
+        $('.plant-name').hide()
+        }
+
+    //Create a way to keep track of how much money you have    
+    let score = 0
+    const totalDollars = () => {
+        let $levelNum = $('.round-number').text()
+        const $walletTotal = $('.wallet-total')
+        console.log(score)
+            if ($levelNum == 0) {
+                score += 5
+                $walletTotal.text(score)
+            }else if($levelNum > 0 && $levelNum < 6) {
+                score += 5
+                $walletTotal.text(score)
+            }
+        }
+    
 })
